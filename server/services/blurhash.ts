@@ -36,7 +36,9 @@ const encodeImage = async (buffer: Buffer): Promise<string> => {
         .toBuffer({ resolveWithObject: true });
 
     let kernw, kernh;
-    kernw = kernh = 3;
+    // kernw = kernh = 3;
+    kernw = 3;
+    kernh = 2;
     if (info.width > info.height) kernw = Math.round(kernw * info.width / info.height);
     else                          kernh = Math.round(kernh * info.height / info.width);
 
